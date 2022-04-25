@@ -15,6 +15,7 @@ const myFunction = () => {
 class CustomError extends Error {
   constructor(message = "", ...args) {
     super(message, ...args);
+    this.name = "CustomError";
     this.message = message + ". This is a custom Error";
     /** This field is not displayed in the rollbar logs */
     this.extraField = "Some more custom information about the bug";
